@@ -2,7 +2,7 @@
 
 ## Visão Geral
 
-Este projeto foi desenvolvido como parte de um teste técnico para a vaga de Engenheiro de Dados Júnior/DataOps.
+Este projeto foi desenvolvido como parte de um teste técnico.
 
 O objetivo é consumir uma API REST de relatórios, autenticar utilizando o fluxo OAuth 2.0, gerar relatórios de transações e produtos, recuperar os dados, realizar o cruzamento entre as fontes e salvar o resultado final em formato tabular.
 
