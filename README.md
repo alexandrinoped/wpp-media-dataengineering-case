@@ -79,9 +79,13 @@ O projeto foi organizado de forma modular para separar as responsabilidades do p
 Essa abordagem melhora a legibilidade do código, facilita manutenção futura e permite evoluções sem alterar toda a lógica principal.
 
 ## Pré-requisitos
- - Python 3.10 ou superior
- - Ambiente virtual Python
- - Bibliotecas listadas no arquivo `requirements.txt`
+
+- Python 3.10, 3.11 ou 3.12
+- Ambiente virtual Python
+- Bibliotecas listadas no arquivo `requirements.txt`
+```
+O projeto foi validado utilizando Python 3.12.3 Recomenda-se evitar versões muito recentes ou ainda pouco suportadas por algumas bibliotecas, como Python 3.14, para evitar incompatibilidades na instalação de dependências.
+```
 
 ## Instalação
 
@@ -93,6 +97,11 @@ python -m venv .venv
 2. No Windows PowerShell:
 ```PowerShell
 .venv\Scripts\Activate
+```
+Ou
+
+```
+.\.venv\Scripts\Activate.ps1
 ```
 
 3. Instale as dependências
@@ -174,3 +183,11 @@ process_id.txt
 O arquivo real de credenciais não deve ser enviado para repositórios públicos.
 
 A entrega deve conter o código-fonte, o arquivo final gerado e o `process_id` utilizado, mas as credenciais devem ser tratadas separadamente.
+
+## Observação sobre execuções
+
+Cada execução do pipeline gera um novo `process_id` por meio do recurso `generate_report`.
+
+Por isso, caso o script seja executado novamente, a quantidade de linhas do arquivo final pode variar conforme os dados retornados pela API para o novo processo gerado.
+
+O arquivo `process_id.txt` corresponde à execução utilizada para gerar os arquivos entregues.
