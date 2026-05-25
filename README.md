@@ -80,7 +80,7 @@ Essa abordagem melhora a legibilidade do código, facilita manutenção futura e
 
 ## Pré-requisitos
 
-- Python 3.10, 3.11 ou 3.12
+- Python `3.10, 3.11 ou 3.12`
 - Ambiente virtual Python
 - Bibliotecas listadas no arquivo `requirements.txt`
 ```
@@ -96,13 +96,18 @@ python -m venv .venv
 
 2. No Windows PowerShell:
 ```PowerShell
-.venv\Scripts\Activate
+.\.venv\Scripts\Activate
 ```
 Ou
 
 ```
 .\.venv\Scripts\Activate.ps1
 ```
+Caso o PowerShell bloqueie a ativação da `.venv` por política de execução, execute:
+```PowerShell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+Depois tente ativar novamente o ambiente virtual.
 
 3. Instale as dependências
 ```bash
